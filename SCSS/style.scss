@@ -1,0 +1,115 @@
+@use "variables" as *;
+@use "mixin" as *;
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.head {
+    height: 46px;
+    padding: 0 30px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    .hamburger {
+        width: 35px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: none;
+
+        span {
+           width: 100%;
+           height: 4px;
+           background: black;
+           display: block;
+        }
+    }
+
+    div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a {
+        color: $colorDarckText;
+        @include btnStyle;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+    }
+
+    &-list {
+        gap: 20px;
+
+        a {
+
+        &:hover {
+            background-color: $colorHoverBtn;
+        }
+    }
+    }
+
+    &-icons {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 870px) {
+    .head {
+        &-list {
+        gap: 10px;
+        }
+    }
+}
+
+@media (max-width: 815px) {
+    .head {
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+
+        .hamburger {
+            display: flex;
+        }
+        
+        div {
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            top: -23%;
+            background: #fff;
+            display: none;
+
+        }
+
+        &-list {
+            margin: 3rem 0 0 0;
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                padding: 15px 0;
+            }
+        }
+
+        ul:nth-child(2) {
+            flex-direction: column;
+        }
+
+        &-icons {
+            justify-content: center;
+        }
+    }
+}
