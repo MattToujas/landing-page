@@ -168,3 +168,21 @@ body {
             justify-content: center;
   }
 }
+.slider {
+  width: 100%;
+  overflow: hidden;
+}
+.slider-slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.5 ease-in;
+  transition: -webkit-transform 0.5 ease-in;
+  transition: transform 0.5 ease-in;
+  transition: transform 0.5 ease-in, -webkit-transform 0.5 ease-in;
+}
+.slider-slides--slide {
+  width: 100%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}

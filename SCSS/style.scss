@@ -6,6 +6,8 @@ body {
     padding: 0;
 }
 
+//Navbar
+
 .head {
     height: 46px;
     padding: 0 30px;
@@ -156,6 +158,23 @@ body {
 
         &-icons {
             justify-content: center;
+        }
+    }
+}
+
+//Slider
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+
+    &-slides {
+        display: flex;
+        transition: transform 0.5 ease-in;
+
+        &--slide {
+           width: 100%;
+           flex-shrink: 0;
         }
     }
 }
