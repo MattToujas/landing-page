@@ -9,6 +9,12 @@ body {
   font-weight: bold;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.head #logoResponsive {
+  display: none;
+}
+.head #closeMenu {
+  display: none;
+}
 .head .hamburger {
   width: 35px;
   height: 30px;
@@ -33,7 +39,7 @@ body {
   background: black;
   display: block;
 }
-.head div {
+.head .responsive {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,12 +83,28 @@ body {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .head #closeMenu {
+    display: block;
+  }
+  .head #logoResponsive {
+    display: block;
+  }
   .head .hamburger {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    top: 7px;
+    position: relative;
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: -webkit-transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1), -webkit-transform 1s cubic-bezier(0.25, 1, 0.5, 1);
   }
-  .head div {
+  .head .hamburger.active {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  .head .responsive {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -95,10 +117,38 @@ body {
     width: 100%;
     top: -23%;
     background: #fff;
-    display: none;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+  }
+  .head .responsive div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .head .responsive button {
+    background: none;
+    border: none;
+  }
+  .head .responsive #closeMenu {
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease;
+  }
+  .head .responsive.active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .head .responsive.active #closeMenu {
+    opacity: 1;
   }
   .head-list {
-    margin: 3rem 0 0 0;
+    margin: 2rem 0 0 0;
   }
   .head ul {
     padding: 0;
