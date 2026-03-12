@@ -115,8 +115,7 @@ body {
     height: 100%;
     position: absolute;
     width: 100%;
-    top: -23%;
-    background: #fff;
+    top: 430%;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
     -webkit-transition: -webkit-transform 1s ease;
@@ -130,6 +129,7 @@ body {
     display: flex;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    background: #000;
   }
   .head .responsive button {
     background: none;
@@ -148,10 +148,12 @@ body {
     opacity: 1;
   }
   .head-list {
-    margin: 2rem 0 0 0;
+    margin: -1px 0 0 0;
   }
   .head ul {
     padding: 0;
+    background: rgba(0, 0, 0, 0.8392156863);
+    margin: 0;
   }
   .head ul li {
     padding: 15px 0;
@@ -161,6 +163,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    background: rgba(0, 0, 0, 0.8392156863);
   }
   .head-icons {
     -webkit-box-pack: center;
@@ -171,18 +174,78 @@ body {
 .slider {
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 .slider-slides {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: -webkit-transform 0.5 ease-in;
-  transition: -webkit-transform 0.5 ease-in;
-  transition: transform 0.5 ease-in;
-  transition: transform 0.5 ease-in, -webkit-transform 0.5 ease-in;
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
 }
 .slider-slides--slide {
   width: 100%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+.slider-arrows {
+  position: absolute;
+  width: 97%;
+  top: 50%;
+  left: 1.5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.slider-arrows button {
+  background: rgba(212, 212, 212, 0.342);
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 30px;
+}
+
+.imgDesktop {
+  display: block;
+}
+
+.imgResponsive {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  .head {
+    position: relative;
+    z-index: 2;
+  }
+  .head a, .head span, .head button {
+    color: #fff;
+  }
+  .head .hamburger span {
+    background: #fff;
+  }
+  .slider {
+    position: absolute;
+    top: 0;
+  }
+  .imgResponsive {
+    display: block;
+  }
+  .imgDesktop {
+    display: none;
+  }
+}
+@media (min-width: 850px) {
+  img {
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }

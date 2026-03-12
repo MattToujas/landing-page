@@ -1,6 +1,6 @@
 const slides = document.querySelector(".slider-slides");
-const slide = document.querySelectorAll(".slider-slides--slide");
-
+const slide = [...document.querySelectorAll(".slider-slides--slide")]
+  .filter(el => el.offsetParent !== null);
 let index = 1;
 
 slides.style.transform = `translateX(-${index * 100}%)`;
@@ -30,12 +30,6 @@ preV.addEventListener("click", () => {
   slides.style.transition = "0.5s";
   slides.style.transform = `translateX(-${index * 100}%)`;
 
-});
-
-const prev= document.querySelector(".slider-prev").addEventListener("click" , () => {
-    index--;
-    slides.style.transition = "transform 0.5 ease-in"
-    slides.style.transform = `translateX(-${index * 100}%)`;
 });
 
 slides.addEventListener("transitionend", () => {
