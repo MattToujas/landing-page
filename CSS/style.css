@@ -40,6 +40,11 @@ body {
   background: black;
   display: block;
 }
+.head .logo {
+  width: 40px;
+  height: 40px;
+  padding: 3px 0 0 0;
+}
 .head .responsive {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,7 +99,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    top: 7px;
+    top: 18px;
     position: relative;
     -webkit-transition: -webkit-transform 1s cubic-bezier(0.25, 1, 0.5, 1);
     transition: -webkit-transform 1s cubic-bezier(0.25, 1, 0.5, 1);
@@ -116,7 +121,7 @@ body {
     height: 100%;
     position: absolute;
     width: 100%;
-    top: 430%;
+    top: 263%;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
     -webkit-transition: -webkit-transform 1s ease;
@@ -233,20 +238,20 @@ body {
   .head .hamburger span {
     background: #fff;
   }
+  .head .hamburger {
+    width: 42px;
+    height: 35px;
+  }
   .slider {
     position: relative;
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
+    -webkit-transform: translateY(-67px);
+            transform: translateY(-67px);
   }
   .imgResponsive {
     display: block;
   }
   .imgDesktop {
     display: none;
-  }
-  .head .hamburger {
-    width: 42px;
-    height: 37px;
   }
 }
 @media (min-width: 850px) {
