@@ -211,6 +211,7 @@ body {
   padding: 15px;
   border-radius: 5px;
   font-size: 30px;
+  color: #2d2d2d;
 }
 
 .imgDesktop {
@@ -242,6 +243,10 @@ body {
   }
   .imgDesktop {
     display: none;
+  }
+  .head .hamburger {
+    width: 42px;
+    height: 37px;
   }
 }
 @media (min-width: 850px) {
