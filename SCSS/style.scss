@@ -207,6 +207,11 @@ body {
             color: #2d2d2d;
         }
     }
+
+    img {
+        height: 100vh;
+        object-fit: cover;
+    }
 }
 
 .imgDesktop {

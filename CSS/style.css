@@ -218,6 +218,11 @@ body {
   font-size: 30px;
   color: #2d2d2d;
 }
+.slider img {
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .imgDesktop {
   display: block;
