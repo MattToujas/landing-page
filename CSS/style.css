@@ -128,7 +128,7 @@ body {
     height: 100%;
     position: absolute;
     width: 100%;
-    top: 263%;
+    top: 181%;
     -webkit-transform: translateX(-100%);
             transform: translateX(-100%);
     -webkit-transition: -webkit-transform 1s ease;
@@ -253,7 +253,7 @@ body {
     background: #fff;
   }
   .head .hamburger {
-    width: 42px;
+    width: 45px;
     height: 35px;
   }
   .slider {
