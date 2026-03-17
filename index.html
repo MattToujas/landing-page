@@ -107,7 +107,7 @@
 
     </section>
 
-    <form class="form">
+    <form class="form" id="form">
 
         <h1>Contact</h1>
 
@@ -127,17 +127,20 @@
          </div>
         
          <div class="form-field">
-           <textarea id="message" rows="4" required></textarea>
+           <textarea id="message" rows="4"></textarea>
            <label for="message">Consult</label>
          </div>
         
-         <button class="form-btn">
-           Submmit
-         </button>
+          <button type="submit" class="form-btn" id="submitBtn">
+            <span class="btn-text">Submit</span>
+            <span class="spinner"></span>
+          </button>
+
 
     </form>
 
     <script src="JS/main.js"></script>
     <script src="JS/slider.js"></script>
+    <script src="JS/form.js"></script>
 </body>
 </html>
