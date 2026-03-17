@@ -319,6 +319,10 @@ body {
   text-align: center;
   padding: 1rem 2rem;
 }
+.about p {
+  width: 80%;
+  margin: 0 auto;
+}
 .about-grid {
   padding-top: 2rem;
   margin: 0 auto;
@@ -363,6 +367,9 @@ body {
   }
 }
 @media (max-width: 540px) {
+  .about p {
+    width: 100%;
+  }
   .about-grid {
     max-width: 100%;
   }

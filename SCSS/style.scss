@@ -324,6 +324,11 @@ body {
   text-align: center;
   padding: 1rem 2rem;
 
+  p {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   &-grid {
     padding-top: 2rem;
     margin: 0 auto;
@@ -380,6 +385,10 @@ body {
   }
 
   @media (max-width: 540px) {
+
+    p {
+    width: 100%;
+    }
 
     &-grid {
       max-width: 100%;
