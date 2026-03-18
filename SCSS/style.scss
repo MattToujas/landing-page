@@ -65,6 +65,10 @@ body {
   .responsive {
     display: flex;
     justify-content: space-between;
+
+    button {
+      display: none;
+    }
   }
 
   a {
@@ -149,6 +153,7 @@ body {
       }
 
       button {
+        display: block;
         background: none;
         border: none;
       }

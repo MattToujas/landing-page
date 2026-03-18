@@ -68,6 +68,9 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.head .responsive button {
+  display: none;
+}
 .head a {
   color: #000;
   padding: 10px;
@@ -159,6 +162,7 @@ body {
     background: #000;
   }
   .head .responsive button {
+    display: block;
     background: none;
     border: none;
   }
