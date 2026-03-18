@@ -335,7 +335,11 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
   .products-content img {
-    max-height: 200px;
+    max-height: 170px;
+    max-width: 140px;
+  }
+  .products-content h3 {
+    font-size: 0.9rem;
   }
 }
 
