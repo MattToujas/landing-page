@@ -7,8 +7,16 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("active");
 });
 
-const closeMenu = document.querySelector("#closeMenu")
+/* const closeMenu = document.querySelector(".closeMenu")
 
 closeMenu.addEventListener("click", () => {
   menu.classList.remove("active");
-})
+}) */
+
+const closeMenu = document.querySelectorAll(".closeMenu");
+
+closeMenu.forEach(btn => {
+  btn.addEventListener("click", () => {
+    menu.classList.remove("active");
+  });
+});

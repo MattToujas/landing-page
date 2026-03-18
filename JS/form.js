@@ -1,5 +1,6 @@
 const form = document.getElementById("form");
 const btn = document.getElementById("submitBtn");
+const success = document.getElementById("formSuccess");
 
 form.addEventListener("submit", (e) => {
 
@@ -14,6 +15,8 @@ form.addEventListener("submit", (e) => {
     btn.disabled = false;
 
     form.reset()
+
+    success.classList.add("show");
 
   }, 1000);
 

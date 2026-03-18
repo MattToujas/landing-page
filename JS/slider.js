@@ -1,3 +1,5 @@
+let startX = 0;
+let endX = 0;
 const slides = document.querySelector(".slider-slides");
 const slide = [...document.querySelectorAll(".slider-slides--slide")]
   .filter(el => el.offsetParent !== null);
@@ -51,3 +53,28 @@ slides.addEventListener("transitionend", () => {
   }
 
 });
+
+//Mobile swipe
+
+slides.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+slides.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+
+  const swipeDistance = startX - endX;
+
+  if (swipeDistance > 50) {
+    next.click();
+  }
+
+  if (swipeDistance < -50) {
+    preV.click();
+  }
+
+}

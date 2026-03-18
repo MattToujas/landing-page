@@ -9,7 +9,7 @@
 <body>
     <header class="head">
 
-        <a id="logoResponsive" href=""><img class="logo" src="IMG/logo.png" alt="Logo"></a>
+        <a id="logoResponsive" href="#slider"><img class="logo" src="IMG/logo.png" alt="Logo"></a>
         <button class="hamburger">
             <span></span>
             <span></span>
@@ -18,13 +18,13 @@
 
         <div class="responsive">
             <div>
-                <a href=""><img class="logo" src="IMG/logo.png" alt="Logo"></a>
-                <button id="closeMenu" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10l4 4m0 -4l-4 4" /><path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" /></svg></button>
+                <a href="#slider"><img class="logo closeMenu" src="IMG/logo.png" alt="Logo"></a>
+                <button class="closeMenu" href=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-square-rounded-x"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10l4 4m0 -4l-4 4" /><path d="M12 3c7.2 0 9 1.8 9 9c0 7.2 -1.8 9 -9 9c-7.2 0 -9 -1.8 -9 -9c0 -7.2 1.8 -9 9 -9" /></svg></button>
             </div>
         <ul class="head-list">
-            <li><a href="#">Products</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a class="closeMenu" href="#products">Products</a></li>
+            <li><a class="closeMenu" href="#about">About Us</a></li>
+            <li><a class="closeMenu" href="#form">Contact</a></li>
         </ul>
         <ul class="head-icons">
             <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-question-mark"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4" /><path d="M12 19l0 .01" /></svg></a></li>
@@ -34,7 +34,7 @@
         </div>
     </header>
 
-    <section class="slider">
+    <section class="slider" id="slider">
     
       <div class="slider-slides">
     
@@ -62,7 +62,7 @@
     
     </section>
 
-    <section class="products">
+    <section class="products" id="products">
         <h1>products</h1>
         <div class="products-content">
             <div class="products-content--product">
@@ -88,7 +88,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
 
         <h1>About Us</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A nulla corrupti, asperiores, eos maxime atque provident voluptatum ipsam nostrum nemo ad tempore magni veniam dolore quod quia praesentium quam quasi.</p>
@@ -138,6 +138,10 @@
 
 
     </form>
+
+    <div class="form-success" id="formSuccess">
+        Message sent successfully!
+    </div>
 
     <script src="JS/main.js"></script>
     <script src="JS/slider.js"></script>
